@@ -1,5 +1,3 @@
-scalariformSettings
-
 sbtPlugin := true
 
 name := """sbt-slick-codegen"""
@@ -10,13 +8,7 @@ version := "1.2.2-SNAPSHOT"
 
 val slickVersion = SettingKey[String]("slickVersion")
 
-slickVersion := {
-  if((sbtVersion in pluginCrossBuild).value.startsWith("1.0.")) {
-    "3.2.0"
-  } else {
-    "3.1.0"
-  }
-}
+slickVersion := "3.2.1"
 
 libraryDependencies ++= Seq(
   "com.typesafe.slick" %% "slick" % slickVersion.value,
@@ -53,16 +45,3 @@ pomExtra :=
       <url>http://tototoshi.github.io</url>
     </developer>
   </developers>
-
-ScriptedPlugin.scriptedSettings
-
-ScriptedPlugin.scriptedBufferLog := false
-
-ScriptedPlugin.scriptedLaunchOpts ++= sys.process.javaVmArguments.filter(
-  a => Seq("-Xmx", "-Xms", "-XX", "-Dsbt.log.noformat").exists(a.startsWith)
-)
-
-ScriptedPlugin.scriptedLaunchOpts ++= Seq(
-  "-Dplugin.version=" + version.value,
-  "-Dslick.version=" + slickVersion.value
-)
