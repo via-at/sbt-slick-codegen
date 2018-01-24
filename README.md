@@ -69,6 +69,14 @@ slickCodegenExcludedTables in Compile := Seq("schema_version")
 slickCodegenOutputDir := (sourceManaged in Compile).value
 ```
 
+## Publish Local
+
+Run the following command to publish a package on `~/.ivy2/local`.
+
+```
+$ sbt publishLocal
+```
+
 ## Example
 
 https://github.com/tototoshi/sbt-slick-codegen-example
