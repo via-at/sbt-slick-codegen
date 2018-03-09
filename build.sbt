@@ -4,11 +4,11 @@ name := """sbt-slick-codegen"""
 
 organization := "com.github.tototoshi"
 
-version := "1.2.2-SNAPSHOT"
+version := "1.2.3-SNAPSHOT"
 
 val slickVersion = SettingKey[String]("slickVersion")
 
-slickVersion := "3.2.1"
+slickVersion := "3.2.2"
 
 libraryDependencies ++= Seq(
   "com.typesafe.slick" %% "slick" % slickVersion.value,
