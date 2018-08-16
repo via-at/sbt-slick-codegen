@@ -8,7 +8,7 @@ version := "1.2.3-SNAPSHOT"
 
 val slickVersion = SettingKey[String]("slickVersion")
 
-slickVersion := "3.2.2"
+slickVersion := "3.2.3"
 
 libraryDependencies ++= Seq(
   "com.typesafe.slick" %% "slick" % slickVersion.value,
