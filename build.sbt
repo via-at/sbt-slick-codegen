@@ -4,7 +4,7 @@ name := """sbt-slick-codegen"""
 
 organization := "com.github.tototoshi"
 
-version := "1.2.3-SNAPSHOT"
+version := "1.2.4-SNAPSHOT"
 
 val slickVersion = SettingKey[String]("slickVersion")
 
